@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Кнопка-повідомлення</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <section class="card" role="region" aria-labelledby="title">
+        <h1 id="title">Натисни кнопку</h1>
+        <p class="muted">Клікни, щоб показати повідомлення.</p>
+
+        <button
+          id="showBtn"
+          class="btn"
+          type="button"
+          aria-controls="output"
+          aria-expanded="false"
+        >
+          Показати текст
+        </button>
+
+        <!-- Початково приховано, показується після кліку -->
+        <div id="output" class="output" aria-live="polite" aria-hidden="true">
+          Антон гей
+        </div>
+      </section>
+
+      <footer class="footer">
+        <small>© 2025</small>
+      </footer>
+    </main>
+
+    <!-- Скрипт наприкінці тіла, щоб елементи були вже в DOM -->
+    <script src="./js/script.js"></script>
+  </body>
+</html>
